@@ -1,6 +1,6 @@
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    image: adlatif/nodejs-ci-cd-pipeline:jenkins
     container_name: jenkins
     ports:
       - '8080:8080'
@@ -14,7 +14,7 @@ services:
       - ci_cd_network
 
   sonarqube:
-    image: sonarqube:latest
+    image: adlatif/nodejs-ci-cd-pipeline:sonarqube
     container_name: sonarqube
     ports:
       - '9000:9000'
